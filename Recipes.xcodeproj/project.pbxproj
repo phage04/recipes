@@ -18,6 +18,8 @@
 		DE89DFAE1C78AA8700CA9E58 /* Recipe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89DFAC1C78AA8700CA9E58 /* Recipe+CoreDataProperties.swift */; };
 		DE89DFAF1C78AA8700CA9E58 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89DFAD1C78AA8700CA9E58 /* Recipe.swift */; };
 		DE89DFB11C78AC7300CA9E58 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89DFB01C78AC7300CA9E58 /* RecipeCell.swift */; };
+		DE89DFB31C7A322B00CA9E58 /* CreateReciperVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89DFB21C7A322B00CA9E58 /* CreateReciperVC.swift */; };
+		DE89DFB51C7AA6F900CA9E58 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89DFB41C7AA6F900CA9E58 /* DetailsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		DE89DFAC1C78AA8700CA9E58 /* Recipe+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Recipe+CoreDataProperties.swift"; path = "../Recipe+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DE89DFAD1C78AA8700CA9E58 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Recipe.swift; path = ../Recipe.swift; sourceTree = "<group>"; };
 		DE89DFB01C78AC7300CA9E58 /* RecipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
+		DE89DFB21C7A322B00CA9E58 /* CreateReciperVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateReciperVC.swift; sourceTree = "<group>"; };
+		DE89DFB41C7AA6F900CA9E58 /* DetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				DE89DF7A1C78A2F600CA9E58 /* ViewController.swift */,
+				DE89DFB21C7A322B00CA9E58 /* CreateReciperVC.swift */,
+				DE89DFB41C7AA6F900CA9E58 /* DetailsVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -293,7 +299,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE89DF7B1C78A2F600CA9E58 /* ViewController.swift in Sources */,
+				DE89DFB51C7AA6F900CA9E58 /* DetailsVC.swift in Sources */,
 				DE89DFAE1C78AA8700CA9E58 /* Recipe+CoreDataProperties.swift in Sources */,
+				DE89DFB31C7A322B00CA9E58 /* CreateReciperVC.swift in Sources */,
 				DE89DF791C78A2F600CA9E58 /* AppDelegate.swift in Sources */,
 				DE89DFB11C78AC7300CA9E58 /* RecipeCell.swift in Sources */,
 				DE89DF811C78A2F600CA9E58 /* Recipes.xcdatamodeld in Sources */,

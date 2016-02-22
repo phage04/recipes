@@ -7,17 +7,53 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-
     var recipes = [Recipe]()
+    let detailsSegueIdentifier = "ShowDetails"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        fetchAndSetResults()
+        tableView.reloadData()
+    }
+
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == detailsSegueIdentifier {
+            if let details = segue.destinationViewController as? DetailsVC {
+                if let recipeIndex = tableView.indexPathForSelectedRow?.row {
+                    details.recipeDetailTitleLbl = recipes[recipeIndex].title
+                    details.recipeDetailImageImg = UIImage(data: recipes[recipeIndex].image!)
+                    details.recipeDetailIngredientsLbl = recipes[recipeIndex].ingredients
+                    details.recipeDetailStepsLbl = recipes[recipeIndex].steps
+                    
+                }
+            }
+        }
+    }
+    
+    func fetchAndSetResults() {
+        let app = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context = app.managedObjectContext
+        let fetchRequest = NSFetchRequest(entityName: "Recipe")
+        
+        do {
+            let results = try context.executeFetchRequest(fetchRequest)
+            self.recipes = results as! [Recipe]
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
         
     }
 
